@@ -4,8 +4,8 @@ using NUnit.Framework;
 namespace Task4.Tests {
     [TestFixture]
     public class SearchTests {
-        private int[] array = {-4, 1, 4, 7, 12, 56};
-        private string[] names = {"Ann", "Danill", "Melanie","Zoyee"};
+        private readonly int[] array = {-4, 1, 4, 7, 12, 56};
+        private readonly string[] names = {"Ann", "Danill", "Melanie","Zoyee"};
 
 
         public static IEnumerable<TestCaseData> TestIntDatas {
@@ -36,5 +36,6 @@ namespace Task4.Tests {
         public bool BinarySearchTest_String(string x) {
             return Search.BinarySearch(names, x);
         }
+
     }
 }
