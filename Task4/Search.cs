@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Task4 {
     public static class Search {
         public static bool BinarySearch<T>(T[] array, T x, IComparer<T> comparer = null) {
+            if(array == null) throw new ArgumentNullException($"{nameof(array)} is null");
             if (comparer != null) return Find(array, x, 0, array.Length - 1, comparer);
             var comparable = x as IComparable<T>;
             if (comparable == null) throw new ArgumentException("Values mustn't comparer.");
