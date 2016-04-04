@@ -5,7 +5,7 @@ namespace Task4 {
     public static class Search {
         public static bool BinarySearch<T>(T[] array, T x, IComparer<T> comparer = null) {
             if (array == null) throw new ArgumentNullException($"{nameof(array)} is null");
-            if (comparer == null && typeof(T).GetInterface("IComparable'1") != null || typeof(T).GetInterface("IComparable") != null)
+            if (comparer == null && typeof(T).GetInterface("IComparable`1") != null || typeof(T).GetInterface("IComparable") != null)
                     comparer = Comparer<T>.Default;
             else throw new ArgumentException("Values mustn't comparer.");
             return Find(array, x, 0, array.Length - 1,comparer);

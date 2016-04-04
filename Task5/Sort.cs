@@ -5,7 +5,7 @@ namespace Task5 {
     public static class Sort{
         public static void BubbleSort<T>(T[] array, IComparer<T> comparer = null){
             if (array == null) throw new ArgumentNullException($"{nameof(array)} is null");
-            if (comparer == null && typeof(T).GetInterface("IComparable'1") != null || typeof(T).GetInterface("IComparable") != null)
+            if (comparer == null && typeof(T).GetInterface("IComparable`1") != null || typeof(T).GetInterface("IComparable") != null)
                 comparer = Comparer<T>.Default;
             else throw new ArgumentException("Values mustn't comparer.");
             for (int i = 0; i < array.Length - 1; i++)
